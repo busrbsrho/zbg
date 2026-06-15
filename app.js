@@ -52,6 +52,10 @@ yesButton.addEventListener("click", () => {
 });
 
 noButton.addEventListener("pointerenter", moveNoButton);
+noButton.addEventListener("click", () => {
+  alert("nuh uh");
+  moveNoButton();
+});
 noButton.addEventListener("pointerdown", moveNoButton);
 noButton.addEventListener("focus", moveNoButton);
 answerZone.addEventListener("pointermove", runWhenCursorIsClose);
