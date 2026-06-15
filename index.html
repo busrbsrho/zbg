@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pinky Promise Portal</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app-shell">
+    <section class="login-panel" id="loginPanel" aria-labelledby="loginTitle">
+      <div class="tiny-badge">for us only</div>
+      <h1 id="loginTitle">Welcome to our extremely official relationship website</h1>
+      <p class="intro">Sign up with your name to unlock a very serious question.</p>
+
+      <form id="signupForm" class="signup-form">
+        <label for="nameInput">Your name</label>
+        <input id="nameInput" name="name" type="text" autocomplete="name" placeholder="The cutest person ever" required>
+        <button type="submit">Sign up and enter</button>
+      </form>
+    </section>
+
+    <section class="love-panel hidden" id="lovePanel" aria-labelledby="loveTitle">
+      <div class="top-row">
+        <span class="tiny-badge" id="helloBadge">hello</span>
+        <button class="ghost-button" id="logoutButton" type="button">Change name</button>
+      </div>
+
+      <h1 id="loveTitle">Important Question Department</h1>
+
+      <div class="message-card">
+        <label for="messageInput">Message from me</label>
+        <textarea id="messageInput" rows="5" maxlength="260"></textarea>
+      </div>
+
+      <div class="question-area" id="questionArea">
+        <p id="questionText">So... will you go on a cute date with me?</p>
+        <div class="answer-zone">
+          <button class="yes-button" id="yesButton" type="button">Yes</button>
+          <button class="no-button" id="noButton" type="button">No</button>
+        </div>
+      </div>
+
+      <div class="celebration hidden" id="celebration" role="status" aria-live="polite">
+        <h2>Correct answer.</h2>
+        <p>I knew you were smart. Date committee approved.</p>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>

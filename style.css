@@ -1,0 +1,266 @@
+:root {
+  --pink-bg: #ffd8e8;
+  --pink-soft: #fff1f7;
+  --pink-hot: #ff4f9a;
+  --berry: #7f1548;
+  --ink: #331224;
+  --white: #ffffff;
+  --shadow: 0 24px 70px rgba(127, 21, 72, 0.18);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Nunito", Arial, sans-serif;
+  color: var(--ink);
+  background:
+    radial-gradient(circle at 15% 20%, rgba(255, 255, 255, 0.75), transparent 24rem),
+    radial-gradient(circle at 88% 16%, rgba(255, 105, 164, 0.24), transparent 18rem),
+    var(--pink-bg);
+  overflow-x: hidden;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+}
+
+.app-shell {
+  width: min(920px, calc(100% - 32px));
+  min-height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  padding: 32px 0;
+}
+
+.login-panel,
+.love-panel {
+  width: min(720px, 100%);
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  padding: clamp(24px, 5vw, 46px);
+  backdrop-filter: blur(18px);
+}
+
+.hidden {
+  display: none !important;
+}
+
+.tiny-badge {
+  display: inline-flex;
+  align-items: center;
+  min-height: 32px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  color: var(--berry);
+  background: var(--pink-soft);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0;
+  font-size: 0.78rem;
+}
+
+h1,
+h2,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  max-width: 660px;
+  margin-bottom: 14px;
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+h2 {
+  margin-bottom: 8px;
+  font-size: 2rem;
+}
+
+.intro {
+  margin-bottom: 28px;
+  color: #643149;
+  font-size: 1.1rem;
+}
+
+.signup-form,
+.message-card {
+  display: grid;
+  gap: 10px;
+}
+
+label {
+  color: var(--berry);
+  font-weight: 900;
+}
+
+input,
+textarea {
+  width: 100%;
+  border: 2px solid rgba(255, 79, 154, 0.25);
+  border-radius: 8px;
+  outline: none;
+  background: var(--white);
+  color: var(--ink);
+  transition: border-color 160ms ease, box-shadow 160ms ease;
+}
+
+input {
+  min-height: 54px;
+  padding: 0 16px;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 132px;
+  padding: 14px 16px;
+  line-height: 1.45;
+}
+
+input:focus,
+textarea:focus {
+  border-color: var(--pink-hot);
+  box-shadow: 0 0 0 4px rgba(255, 79, 154, 0.14);
+}
+
+.signup-form button,
+.yes-button {
+  min-height: 54px;
+  border-radius: 8px;
+  padding: 0 22px;
+  color: var(--white);
+  background: var(--pink-hot);
+  font-weight: 900;
+  box-shadow: 0 12px 26px rgba(255, 79, 154, 0.3);
+  transition: transform 160ms ease, box-shadow 160ms ease;
+}
+
+.signup-form button:hover,
+.yes-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 34px rgba(255, 79, 154, 0.36);
+}
+
+.top-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.ghost-button {
+  min-height: 38px;
+  border-radius: 8px;
+  padding: 0 14px;
+  color: var(--berry);
+  background: rgba(255, 255, 255, 0.7);
+  font-weight: 900;
+}
+
+.message-card {
+  margin: 24px 0;
+}
+
+.question-area {
+  position: relative;
+  min-height: 230px;
+  padding: 24px;
+  border-radius: 8px;
+  background: rgba(255, 241, 247, 0.92);
+  overflow: hidden;
+}
+
+#questionText {
+  margin-bottom: 24px;
+  font-size: clamp(1.35rem, 3vw, 2.3rem);
+  font-weight: 900;
+  line-height: 1.1;
+  color: var(--berry);
+}
+
+.answer-zone {
+  position: relative;
+  min-height: 112px;
+}
+
+.yes-button,
+.no-button {
+  width: 110px;
+}
+
+.no-button {
+  position: absolute;
+  left: 144px;
+  top: 0;
+  min-height: 54px;
+  border-radius: 8px;
+  padding: 0 22px;
+  color: var(--berry);
+  background: var(--white);
+  font-weight: 900;
+  box-shadow: 0 10px 24px rgba(127, 21, 72, 0.16);
+  transition: left 180ms ease, top 180ms ease, transform 120ms ease;
+}
+
+.no-button:focus {
+  outline: 4px solid rgba(255, 79, 154, 0.24);
+}
+
+.celebration {
+  margin-top: 22px;
+  padding: 20px;
+  border-radius: 8px;
+  color: var(--white);
+  background: var(--berry);
+}
+
+.celebration p {
+  margin-bottom: 0;
+}
+
+@media (max-width: 560px) {
+  .app-shell {
+    width: min(100% - 20px, 920px);
+    padding: 10px 0;
+  }
+
+  .login-panel,
+  .love-panel {
+    padding: 22px;
+  }
+
+  .top-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .question-area {
+    padding: 18px;
+    min-height: 250px;
+  }
+
+  .yes-button,
+  .no-button {
+    width: 96px;
+  }
+
+  .no-button {
+    left: 116px;
+  }
+}
